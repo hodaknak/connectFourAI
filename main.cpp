@@ -4,7 +4,13 @@
 #include "cfai.h"
 #include "GameState.h"
 
+extern "C" {
+    #include "eval.h"
+}
+
 int main() {
+    eval();
+
     auto g = cf::GameState();
     const auto ai = cf::cfai(9, cf::Medal::YELLOW);
 
